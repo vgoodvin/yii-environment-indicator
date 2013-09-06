@@ -1,0 +1,177 @@
+/**
+ * Environment Indicator CSS-styles.
+ *
+ * @author Vasily Gudoshnikov
+ * @author Alexander Shvets
+
+ * @see https://drupal.org/project/environment_indicator
+ */
+
+#environment-indicator {
+    font-size: 1.1em;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
+    padding-top: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+body > #environment-indicator {
+    position: fixed;
+}
+body.environment-indicator-left #environment-indicator {
+    left: 0px;
+}
+body.environment-indicator-right #environment-indicator {
+    right: 0px;
+}
+html {
+    height: 100%;
+}
+body.environment-indicator {
+    min-height: 100%;
+}
+body.environment-indicator-left {
+    margin-left: 30px;
+}
+body.environment-indicator-right {
+    margin-right: 30px;
+}
+
+/* Hide the menu on print output. */
+@media print {
+    #environment-indicator {
+        display: none !important;
+    }
+    body.environment-indicator {
+        margin-left: 0 !important;
+    }
+}
+/* User switch list. */
+#ei-ul-wrapper {
+    margin: 50px 0 0 0;
+    padding: 0;
+    position: absolute;
+}
+
+*+html #ei-ul-wrapper {
+    margin-left: -15px;
+}
+
+#ei-ul-button {
+    height: 23px;
+    width: 23px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.ei-ul-button-pushed {
+    background-position: center bottom;
+}
+
+#ei-ul-inner-wrapper {
+    position: relative;
+    top: -27px;
+    display: none;
+    width: 0;
+}
+
+*+html #ei-ul-inner-wrapper {
+    margin-left: -15px;
+}
+
+.ei-ul-inner-wrapper-left {
+    left: 12px;
+}
+
+.ei-ul-inner-wrapper-right {
+    left: -222px;
+}
+
+.ei-ul-inner-wrapper-visible {
+    display: block !important;
+}
+
+#ei-ul-arrow {
+    font-size: 0px;
+    line-height: 0%;
+    width: 0px;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    position: relative;
+    z-index: 1000;
+}
+
+.ei-ul-arrow-left {
+    left: 20px;
+}
+
+.ei-ul-arrow-right {
+    left: 208px;
+}
+
+#ei-ul-list-wrapper {
+    -moz-box-shadow: 0px 0px 90px rgb(0, 0, 0);
+    -khtml-box-shadow: 0px 0px 90px rgb(0, 0, 0);
+    -webkit-box-shadow: 0px 0px 90px rgb(0, 0, 0);
+    box-shadow: 0px 0px 90px rgb(0, 0, 0);
+    text-align: left;
+    left: 30px;
+    position:absolute;
+    top:-37px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#ei-ul-border {
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#ei-ul-bg{
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding:5px 10px;
+}
+
+#ei-ul-login {
+    display:block;
+    width:160px;
+}
+
+#ei-ul-list-wrapper ul {
+    margin: 0;
+    padding: 0;
+}
+
+#ei-ul-list-wrapper ul li {
+    background-image: none;
+    padding: 0;
+    list-style: none outside none;
+    margin: 0;
+    background-repeat: repeat;
+}
+
+#ei-ul-list-wrapper ul li a {
+    color: white;
+    font-size: 0.9em;
+    font-weight: normal;
+    padding-bottom: 2px;
+    text-decoration: none;
+    display: block;
+    width:230px;
+    padding-left: 10px;
+}
