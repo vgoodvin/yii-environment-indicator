@@ -4,6 +4,8 @@ yii-environment-indicator
 Adds a colored strip to the side of the site informing the user which environment they are in (development, staging, production etc).
 Also adds ability to switch current user in two clicks.
 
+Inspired by https://drupal.org/project/environment_indicator
+
 
 ## Usage
 
